@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Version 2</title>
+  </head>
+  <body>
+    <script>
+      // defining the array
+      let todos = ['item 1', 'item 2', 'item 3']
+      // displays the todos in the console
+      function displayTodos() {
+        console.log('My todos: ', todos);
+      }
+      // adds todos, and then displays the new todo list
+      function addTodos(todoTask) { // addTodos('whatever todo we want to add');
+        todos.push(todoTask);
+        displayTodos();
+      }
+      // changes a specific todo, and then displays the new todo list
+      function changeTodos(position, newValue) { // changeTodos(value of the tasks position, and then 'the task name');
+        todos[position] = newValue;
+        displayTodos();
+      }
+      // deletes a specific todo, and then displays the new todo list
+      function deleteTodos(position) { // deleteTodos(value of the position);
+        todos.splice(position, 1);
+        displayTodos();
+      }
+    </script>
+  </body>
+</html>
