@@ -5,7 +5,34 @@
   </head>
   <body>
     <script>
+      // quick comment on object syntax:
+      //  var setVariableHere = {
+      //    firstPiece: 'text',
+      //    secondPiece: 'text',
+      //    thirdPiece: 2017
+      //  };
+      // calling specific pieces of this object:
+      // setVariableHere.firstPiece
 
+      // storing the todo list array on an object
+      let todoList = {
+        todos: ['item 1', 'item 2', 'item 3'],
+        displayTodos: function() {
+          console.log('My Todos: ', this.todos);
+        },
+        addTodo: function(todo) {
+          this.todos.push(todo);
+          this.displayTodos();
+        },
+        changeTodo: function(position, newValue) {
+          this.todos[position] = newValue;
+          this.displayTodos();
+        },
+        deleteTodo: function(position) {
+          this.todos.splice(position, 1);
+          this.displayTodos();
+        }
+      };
     </script>
   </body>
 </html>
